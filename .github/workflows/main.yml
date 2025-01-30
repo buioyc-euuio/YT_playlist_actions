@@ -2,7 +2,7 @@ name: Run Python Script Daily
 
 on:
   schedule:
-    - cron: '13 11 * * *'  # 每天早上 6:00 UTC 时间执行
+    - cron: '14 19 * * *'  # 每天早上 6:00 UTC 时间执行
 
 jobs:
   run-script:
