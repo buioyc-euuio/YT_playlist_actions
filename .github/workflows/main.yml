@@ -1,0 +1,21 @@
+name: Run Python Script Daily
+
+on:
+  schedule:
+    - cron: '10 3 * * *'  # 每天早上 6:00 UTC 时间执行
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Run Python script
+      run: python test_main.py
