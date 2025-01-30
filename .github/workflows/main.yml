@@ -3,6 +3,8 @@ name: Run Python Script Daily
 on:
   schedule:
     - cron: '14 19 * * *'  # 每天早上 6:00 UTC 时间执行
+  # 手動觸發（用於測試）
+  workflow_dispatch:
 
 jobs:
   run-script:
